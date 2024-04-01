@@ -1,28 +1,14 @@
 <head>
 <title>ゴミ</title>  
 <meta name="google-site-verification" content="dIEMkwV-BDKDuUEecs7R_AE4s1bbXdTniZ7so3HQJwA" /></head>
-<img src="fuckin gif image.gif" height="100%"></img>
-<script>
-window.addEventListener('DOMContentLoaded', function(){
-  setInterval(() => {
-    openWebsite();
-  }, 10);
-});
-</script>
-<script>
-function openWebsite() {
-const url = "https://www.example.com/";
-const width = 1;
-const height = 1;
-const x = window.screen.width - width;
-const y = 0;
-window.open(url, "_blank", `width=${width},height=${height},left=${x},top=${y}`);}
-</script>
-<button id="btn" type="button">押してみ</button>
+<button id="btn" style="visibility: visible;" type="button">押してみ</button>
+<img style="visibility: hidden;" id="aaa" src="fuckin gif image.gif" height="100%"></img>
 <script>
 let ele = document.documentElement;
 document.getElementById("btn").addEventListener ( 
   "click", function(){     
+      document.getElementById('aaa').style.visibility = 'visible';
+      document.getElementById('btn').style.display = 'none';
     ele.requestFullscreen();})
 window.addEventListener('beforeunload', function (event) {
   event.preventDefault() // (1)
