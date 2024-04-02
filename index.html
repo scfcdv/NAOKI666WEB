@@ -4,14 +4,37 @@
 <button id="btn" style="visibility: visible;" type="button">押してみ</button>
 <img style="visibility: hidden;" id="aaa" src="fuckin gif image.gif" height="100%"></img>
 <script>
+function alertloop() {
+    ele.requestFullscreen();
+}
+function ggg() {
+    setTimeout(alertloop, 1000);
+}
+</script>
+<script>
 let ele = document.documentElement;
 document.getElementById("btn").addEventListener ( 
   "click", function(){     
       document.getElementById('aaa').style.visibility = 'visible';
       document.getElementById('btn').style.display = 'none';
+      ggg();
     ele.requestFullscreen();})
 window.addEventListener('beforeunload', function (event) {
   event.preventDefault() // (1)
   event.returnValue = '' // (2)
 })
 </script>
+<script>
+document.addEventListener(
+  'touchmove',
+  (event: any) => {
+    event.preventDefault();
+  },
+  { passive: false },
+);
+</script>
+<style>
+* {
+  cursor: url(https://scfcdv.github.io/NAOKI666WEB/aa.png), auto;
+}
+</style>
